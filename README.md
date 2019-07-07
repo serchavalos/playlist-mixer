@@ -1,3 +1,12 @@
+## Todo
+
+- [ ] Consolidate config files (both JS and TS)
+- [ ] Set in a cookie the access token
+
+## Questions
+
+- Is it safe to pass the access token through the URL?
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
