@@ -4,6 +4,8 @@
 
 - [ ] Consolidate config files (both JS and TS)
 - [ ] Set in a cookie the access token
+- [ ] Add tests
+- [ ] Add web bundle analyzer
 
 ## Questions
 

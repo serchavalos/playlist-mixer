@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { parse, stringify } from "qs";
 import { clientID, redirectUri, scope } from "./config";
 import { generateRandomString } from "./utils/string";
-import SpotifyWebApi from "spotify-web-api-js";
+
+import { Search } from "./components/search";
 
 const login = (evt: React.MouseEvent) => {
   evt.preventDefault();
@@ -26,30 +27,18 @@ const getAccessTokenFromUrl = (): string | null => {
   const { a: accessToken } = parse(queryString);
   return accessToken;
 };
-const spotifyClient = new SpotifyWebApi();
 
 const App: React.FC = () => {
-  const [trackName, setTrackName] = useState<string | null>(null);
   const accessToken = getAccessTokenFromUrl();
-  if (accessToken !== null) {
-    spotifyClient.setAccessToken(accessToken);
-    spotifyClient
-      .getMyCurrentPlayingTrack()
-      .then(({ item }: SpotifyApi.CurrentlyPlayingResponse) => {
-        if (item) {
-          setTrackName(item.name);
-        }
-      });
-  }
 
   return (
     <div className="App">
-      {!trackName && (
-        <a href="#" onClick={login}>
+      {!accessToken && (
+        <a href="/#" onClick={login}>
           Login
         </a>
       )}
-      {trackName && <h1>You are listening {trackName}</h1>}
+      {accessToken && <Search accessToken={accessToken} />}
     </div>
   );
 };
