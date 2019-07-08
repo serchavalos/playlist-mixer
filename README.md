@@ -1,3 +1,5 @@
+# Playlist Mixer
+
 ## Todo
 
 - [ ] Consolidate config files (both JS and TS)
