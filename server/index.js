@@ -41,7 +41,7 @@ app.get("/callback", (req, res) => {
       }).then(data => {
         const { access_token: accessToken, refresh_token: refreshToken } = data;
         res.redirect(
-          `http://localhost:3000/?a=${accessToken}&r=${refreshToken}`
+          `http://localhost:3000/auth?a=${accessToken}&r=${refreshToken}`
         );
       });
     }
