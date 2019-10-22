@@ -1,0 +1,37 @@
+{
+  "name": "playlist-mixer",
+  "version": "0.0.1",
+  "description": "Tool for creating playlists derived of several",
+  "main": "index.js",
+  "author": "Sergio Avalos <sergio@spotify.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "start": "webpack-dev-server --content-base public",
+    "server": "node-env-run server --exec nodemon | pino-colada",
+    "dev": "run-p server start"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "css-loader": "^3.2.0",
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
+    "lodash.debounce": "^4.0.8",
+    "mini-css-extract-plugin": "^0.8.0",
+    "qs": "^6.8.0",
+    "request": "^2.88.0",
+    "spotify-web-api-js": "^1.2.0",
+    "style-loader": "^1.0.0",
+    "svelte": "^3.12.1",
+    "svelte-loader": "^2.13.6",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "devDependencies": {
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.19.2",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.4.5"
+  }
+}
