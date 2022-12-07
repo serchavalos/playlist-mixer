@@ -12,7 +12,7 @@
     "http-proxy-middleware": "^0.19.1",
     "lodash.debounce": "^4.0.8",
     "prettier": "^1.18.2",
-    "qs": "^6.7.0",
+    "qs": "^6.7.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
